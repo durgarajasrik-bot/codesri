@@ -1,0 +1,149 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Python | CodeSri</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0B1120;
+            color: #F8FAFC;
+        }
+
+        header {
+            background: #172033;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header a {
+            color: #3B82F6;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .lesson {
+            background: #172033;
+            padding: 25px;
+            margin: 20px 0;
+            border-radius: 12px;
+        }
+
+        h1, h2 {
+            color: #3B82F6;
+        }
+
+        pre {
+            background: #0B1120;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+            color: #F8FAFC;
+        }
+
+        button {
+            background: #3B82F6;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        #answer {
+            margin-top: 15px;
+            color: #F8FAFC;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h2>💙 CodeSri</h2>
+    <a href="index.html">← Back to Home</a>
+</header>
+
+<main>
+    <h1>🐍 Learn Python</h1>
+    <p>Welcome to your first Python lesson! Learn step by step.</p>
+
+    <section class="lesson">
+        <h2>Lesson 1: What is Python?</h2>
+        <p>Python is a programming language. We use it to build applications, websites and AI projects.</p>
+    </section>
+
+    <section class="lesson">
+        <h2>Lesson 2: Your First Program</h2>
+        <p>The <code>print()</code> function displays a message on the screen.</p>
+
+        <pre>print("Hello World!")</pre>
+
+        <p><strong>Output:</strong></p>
+        <pre>Hello World!</pre>
+    </section>
+
+    <section class="lesson">
+        <h2>📝 Quick Quiz</h2>
+        <p>Which Python function displays a message?</p>
+
+        <button onclick="checkAnswer('a')">A. input()</button>
+        <button onclick="checkAnswer('b')">B. print()</button>
+        <button onclick="checkAnswer('c')">C. int()</button>
+
+        <p id="answer"></p>
+    </section>
+</main>
+
+<script>
+    function checkAnswer(choice) {
+        const answer = document.getElementById("answer");
+
+        if (choice === "b") {
+            answer.textContent = "🎉 Correct! print() displays a message.";
+        } else {
+            answer.textContent = "❌ Try again! Hint: It starts with print.";
+        }
+    }
+</script>
+
+<section class="courses" id="quiz">
+    <p class="tagline">TEST YOUR KNOWLEDGE</p>
+    <h2>Python Quick Quiz</h2>
+
+    <div class="course-card">
+        <h3>1. Which keyword is used to define a function in Python?</h3>
+
+        <button onclick="checkAnswer(this, false)">A. function</button>
+        <button onclick="checkAnswer(this, true)">B. def</button>
+        <button onclick="checkAnswer(this, false)">C. define</button>
+
+        <p class="quiz-result"></p>
+    </div>
+</section>
+
+<script>
+function checkAnswer(button, correct) {
+    const result = button.parentElement.querySelector(".quiz-result");
+
+    if (correct) {
+        result.textContent = "Correct! Well done 🎉";
+    } else {
+        result.textContent = "Wrong answer! Try again.";
+    }
+}
+</script>
+
+</body>
+</html>
+```

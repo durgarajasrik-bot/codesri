@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #0B1120;
+    color: #F8FAFC;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 8%;
+    background: #0B1120;
+    border-bottom: 1px solid #263449;
+}
+
+.logo {
+    font-size: 28px;
+    color: white;
+}
+
+.logo span {
+    color: #3B82F6;
+}
+
+nav a {
+    color: #CBD5E1;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+nav a:hover {
+    color: #3B82F6;
+}
+
+.login-btn,
+.start-btn {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.hero {
+    text-align: center;
+    padding: 110px 20px;
+}
+
+.tagline {
+    color: #60A5FA;
+    letter-spacing: 3px;
+    font-size: 13px;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: 55px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.hero h2 span {
+    color: #3B82F6;
+}
+
+.description {
+    color: #94A3B8;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.courses {
+    text-align: center;
+    padding: 70px 8%;
+    background: #111B2D;
+}
+
+.courses h2 {
+    font-size: 35px;
+    margin-bottom: 40px;
+}
+
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.course-card {
+    background: #172033;
+    padding: 35px;
+    border: 1px solid #263449;
+    border-radius: 12px;
+    text-align: left;
+}
+
+.course-card h3 {
+    color: #60A5FA;
+    margin-bottom: 15px;
+}
+
+.course-card p {
+    color: #CBD5E1;
+    line-height: 1.6;
+}
+
+.course-card:hover {
+    border-color: #3B82F6;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    color: #94A3B8;
+}
+
+@media (max-width: 650px) {
+    .navbar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .course-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Quiz and Progress Styling */
+
+.course-card button {
+    background: #3B82F6;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    margin: 6px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.course-card button:hover {
+    background: #2563EB;
+}
+
+.course-card textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 12px;
+    margin: 12px 0;
+    background: #0B1120;
+    color: white;
+    border: 1px solid #3B82F6;
+    border-radius: 8px;
+}
+
+.course-card progress {
+    width: 100%;
+    height: 15px;
+    accent-color: #3B82F6;
+}
+
+.quiz-result {
+    color: #60A5FA;
+    margin-top: 12px;
+}

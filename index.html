@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSri</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Welcome to CodeSri!</h1>
+    <p>Learn. Practice. Build.</p>
+
+    <script src="script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeSri | Learn. Practice. Build.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <h1 class="logo">CodeSri<span>.</span></h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#courses">Courses</a>
+        <a href="#about">About</a>
+    </nav>
+    <button class="login-btn">Get Started</button>
+</header>
+
+<main>
+    <section class="hero" id="home">
+        <p class="tagline">YOUR JOURNEY INTO TECHNOLOGY</p>
+        <h2>Learn to Code.<br>Build Your <span>Future.</span></h2>
+        <p class="description">
+            Explore programming, develop real-world skills
+            and turn your ideas into reality with CodeSri.
+        </p>
+        <a href="#courses" class="start-btn">Explore Courses →</a>
+    </section>
+
+    <section class="courses" id="courses">
+        <p class="tagline">START LEARNING</p>
+        <input type="text" id="courseSearch"
+placeholder="Search courses...">
+        <h2>Explore Learning Paths</h2>
+        <div class="course-container">
+            <div class="course-card">
+                <h3>HTML & CSS</h3>
+                <p>Build beautiful and responsive websites.</p>
+                <div class="course-card">
+    <h3>HTML & CSS</h3>
+    <p>Build beautiful and responsive websites.</p>
+    <a href="html.html">Start Learning →</a>
+</div>
+            </div>
+            <div class="course-card">
+                <h3>Python</h3>
+                <p>Learn programming from the basics.</p>
+                <div class="course-card">
+    <h3>Python</h3>
+    <p>Learn programming from the basics.</p>
+
+    <!-- Ee line kothaga add cheyyali -->
+    <a href="python.html">Start Learning →</a>
+
+</div>
+            </div>
+            <div class="course-card">
+                <h3>Artificial Intelligence</h3>
+                <p>Discover intelligent technology.</p>
+                <a href="ai.html">Start Learning →</a>
+            </div>
+            <div class="course-card">
+                <h3>Machine Learning</h3>
+                <p>Understand data and build smart models.</p>
+                <div class="course-card">
+    <h3>Machine Learning</h3>
+    <p>Understand data and build smart models.</p>
+    <a href="ml.html">Start Learning →</a>
+</div>
+            </div>
+            <div class="course-card">
+                <h3>Data Science</h3>
+                <p>Learn data analysis and visualization.</p>
+                <a href="data.html">Start Learning →</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="about">
+    <p>© 2026 CodeSri. Learn. Practice. Build.</p>
+</footer>
+
+<script src="script.js"></script>
+
+<section class="courses">
+    <p class="tagline">YOUR ACHIEVEMENTS</p>
+    <h2>My Learning Progress</h2>
+
+    <div class="course-card">
+        <h3>Python Course</h3>
+        <p id="progressText">0% Completed</p>
+
+        <progress id="progressBar" value="0" max="100"></progress>
+
+        <button onclick="updateProgress()">Complete Lesson</button>
+    </div>
+</section>
+
+<script>
+let progress = 0;
+
+function updateProgress() {
+    if (progress < 100) {
+        progress += 20;
+    }
+
+    document.getElementById("progressBar").value = progress;
+    document.getElementById("progressText").textContent =
+        progress + "% Completed";
+}
+</script>
+
+<section class="courses">
+    <p class="tagline">DAILY CHALLENGE</p>
+    <h2>Today's Coding Challenge</h2>
+
+    <div class="course-card">
+        <h3>Python Challenge</h3>
+        <p>Write a Python program to check whether a number is even or odd.</p>
+
+        <textarea id="challengeAnswer"
+        placeholder="Write your Python code here..."></textarea>
+
+        <button onclick="showChallenge()">Submit Answer</button>
+
+        <p id="challengeResult"></p>
+    </div>
+</section>
+
+<script>
+function showChallenge() {
+    let answer = document.getElementById("challengeAnswer").value;
+
+    if (answer.trim() === "") {
+        document.getElementById("challengeResult").textContent =
+        "Please write your answer!";
+    } else {
+        document.getElementById("challengeResult").textContent =
+        "Answer submitted! Keep practicing.";
+    }
+}
+</script>
+
+</body>
+</html>
